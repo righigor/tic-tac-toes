@@ -110,12 +110,22 @@ function handleRestartGame() {
   document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
 }
 
+function handleEndGame() {
+  board = ["", "", "", "", "", "", "", "", ""];
+  gameActive = true;
+  currentPlayer = "X";
+  statusDisplay.innerHTML = currentPlayerTurn();
+  document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
+  document.getElementById('initial-screen').style.display = 'flex';
+  document.getElementById('game-screen').style.display = 'none';
+}
+
 function showAlert(message, imgUrl) {
   Swal.fire({
     title: message.toUpperCase(),
     imageUrl: imgUrl,
     confirmButtonText: 'Play Again',
   }).then(() => {
-    handleRestartGame();
+    handleEndGame();
   });
 }
