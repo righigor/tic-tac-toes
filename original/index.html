@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="initial-screen" class="screen">
+    <h1 id="title">Tic-Tac-Toe</h1>
+
+    <div id="form">
+      <div>
+        <label for="player1">Player 1 name:</label>
+        <input type="text" id="player1" name="player1" placeholder="Name of player1">
+      </div>
+      <div>
+        <label for="player2">Player 2 name:</label>
+        <input type="text" id="player2" name="player2" placeholder="Name of player2">
+      </div>
+      <button id="start-button">Start game</button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="screen" style="display: none;">
+    <h1 id="title">Tic-Tac-Toe</h1>
+  
+    <div class="game-board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+  
+    <div class="game-info">
+      <h2 id="game-status">Player 1 turn</h2>
+      <button id="restart-button">Restart game</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>
